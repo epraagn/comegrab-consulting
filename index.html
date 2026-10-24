@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consulting by Prateek Agnihotri | comegrab</title>
+<meta name="description" content="Strategy and technology consulting for telecom, media, industrial and AI-led businesses. Go-to-market, bid strategy, network transformation and AI adoption, with Prateek Agnihotri (MBA, IIM Lucknow; 15+ years in the field).">
+<link rel="canonical" href="https://consulting.comegrab.in/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bring the problem. Leave with a plan.">
+<meta property="og:description" content="Strategy and technology consulting for telecom, media, industrial and AI-led businesses.">
+<meta property="og:url" content="https://consulting.comegrab.in/">
+<meta name="theme-color" content="#0E3B33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2F3EE;
+    --ink:#101814;
+    --muted:#4A5650;
+    --pine:#0E3B33;
+    --pine-soft:#1B5246;
+    --tang:#FF6B1A;
+    --line:rgba(16,24,20,.2);
+    --line-dark:rgba(242,243,238,.25);
+    --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+    --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --wrap:1120px;
+    --gutter:clamp(20px,5vw,48px);
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.65;-webkit-text-size-adjust:100%}
+  img,svg{max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gutter)}
+  h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-.02em}
+  p{margin:0}
+  :focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px}
+  .dark :focus-visible,.panel :focus-visible{outline-color:var(--paper)}
+
+  /* header */
+  .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px}
+  .brand{font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none;letter-spacing:-.02em}
+  .brand span{font-weight:500;color:var(--muted)}
+  .nav{display:flex;align-items:center;gap:28px}
+  .nav a.link{font-family:var(--display);font-weight:500;font-size:1rem;text-decoration:none}
+  .nav a.link:hover{text-decoration:underline;text-underline-offset:5px}
+
+  /* buttons */
+  .btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1rem;line-height:1;text-decoration:none;padding:16px 22px;border-radius:999px;border:2px solid var(--ink);transition:background-color .15s,color .15s}
+  .btn.primary{background:var(--tang);color:var(--ink);border-color:var(--tang)}
+  .btn.primary:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn.small{padding:12px 18px}
+  .dark .btn.ghost{color:var(--paper);border-color:var(--paper)}
+  .dark .btn.ghost:hover{background:var(--paper);color:var(--pine)}
+  .dark .btn.primary:hover{background:var(--paper);border-color:var(--paper);color:var(--pine)}
+
+  /* hero */
+  .hero{display:grid;gap:44px;padding-block:clamp(36px,7vw,84px) clamp(56px,8vw,104px);align-items:start}
+  @media(min-width:920px){.hero{grid-template-columns:1.08fr .92fr;gap:64px}}
+  .hero h1{font-weight:800;font-size:clamp(2.7rem,7.4vw,5.5rem);letter-spacing:-.035em}
+  .lede{margin-top:26px;font-size:clamp(1.15rem,2.2vw,1.35rem);max-width:34em;color:var(--muted)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+
+  .panel{background:var(--pine);color:var(--paper);border-radius:22px;padding:clamp(22px,3.5vw,36px)}
+  .panel h2{font-weight:700;font-size:1.35rem}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .chip{font-family:var(--display);font-weight:500;font-size:.98rem;line-height:1.1;color:var(--paper);background:transparent;border:1.5px solid var(--line-dark);border-radius:999px;padding:11px 16px;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
+  .chip:hover{border-color:var(--paper)}
+  .chip[aria-pressed="true"]{background:var(--paper);color:var(--pine);border-color:var(--paper);font-weight:700}
+  .out{margin-top:26px;padding-top:24px;border-top:1px solid var(--line-dark)}
+  .out h3{font-weight:700;font-size:1.05rem;color:var(--paper);opacity:.85}
+  .out ul{list-style:none;margin:14px 0 0;padding:0}
+  .out li{padding:13px 0;border-top:1px solid var(--line-dark);font-size:1.12rem;line-height:1.45}
+  .out li:first-child{border-top:0;padding-top:4px}
+
+  /* sections */
+  section{scroll-margin-top:12px}
+  .block{padding-block:clamp(56px,8vw,104px)}
+  .block + .block{border-top:1px solid var(--line)}
+  .sec-head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px);max-width:40rem}
+  .sec-head h2{font-weight:800;font-size:clamp(2rem,4.6vw,3.2rem);letter-spacing:-.03em}
+  .sec-head p{color:var(--muted)}
+
+  .services{list-style:none;margin:0;padding:0}
+  .services li{display:grid;gap:8px;padding-block:24px;border-top:1px solid var(--line)}
+  .services li:last-child{border-bottom:1px solid var(--line)}
+  @media(min-width:820px){.services li{grid-template-columns:.8fr 1.2fr;gap:48px}}
+  .services h3{font-weight:700;font-size:1.35rem;letter-spacing:-.015em}
+  .services p{color:var(--muted);max-width:36em}
+
+  .steps{list-style:none;margin:0;padding:0;counter-reset:step;display:grid;gap:0}
+  .steps li{counter-increment:step;display:grid;grid-template-columns:auto 1fr;gap:6px 22px;padding-block:22px;border-top:1px solid var(--line)}
+  .steps li::before{content:counter(step);font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--pine);grid-row:span 2;min-width:1.2ch}
+  .steps h3{font-weight:700;font-size:1.3rem}
+  .steps p{color:var(--muted);max-width:38em}
+  @media(min-width:900px){.steps{grid-template-columns:repeat(4,1fr);column-gap:28px}.steps li{grid-template-columns:1fr;border-top:2px solid var(--ink);padding-top:20px}.steps li::before{grid-row:auto;margin-bottom:10px}}
+
+  /* about + contact on dark */
+  .dark{background:var(--pine);color:var(--paper)}
+  .dark .sec-head p{color:rgba(242,243,238,.8)}
+  .about{display:grid;gap:40px}
+  @media(min-width:900px){.about{grid-template-columns:1.1fr .9fr;gap:72px}}
+  .about p+p{margin-top:18px}
+  .facts{margin:0;padding:0;list-style:none}
+  .facts li{padding-block:14px;border-top:1px solid var(--line-dark)}
+  .facts li:last-child{border-bottom:1px solid var(--line-dark)}
+  .facts strong{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem}
+  .facts span{opacity:.82;font-size:1rem}
+  .contact-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  [hidden]{display:none!important}
+
+  footer{padding-block:30px 40px;font-size:.95rem;color:var(--muted)}
+  footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  footer a{text-underline-offset:4px}
+
+  @media(max-width:640px){.nav a.link{display:none}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="brand" href="https://comegrab.in" aria-label="comegrab home">comegrab<span>/consulting</span></a>
+  <nav class="nav" aria-label="Main">
+    <a class="link" href="#services">Services</a>
+    <a class="link" href="#process">How it works</a>
+    <a class="link" href="#about">About</a>
+    <a class="btn primary small" href="#contact">Book a conversation</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <h1>Bring the problem. Leave with a plan.</h1>
+      <p class="lede">Strategy and technology consulting for telecom, media, industrial and AI-led businesses. I'm Prateek Agnihotri: more than 15 years in the field, MBA from IIM Lucknow.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Book a conversation</a>
+        <a class="btn ghost" href="#services">See how I can help</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 id="panel-q">What are you working on?</h2>
+      <div class="chips" role="group" aria-labelledby="panel-q">
+        <button type="button" class="chip" data-k="telco" aria-pressed="true">Telecom operator</button>
+        <button type="button" class="chip" data-k="vendor" aria-pressed="false">Technology vendor</button>
+        <button type="button" class="chip" data-k="industry" aria-pressed="false">Industrial or energy firm</button>
+        <button type="button" class="chip" data-k="consumer" aria-pressed="false">Consumer or retail business</button>
+        <button type="button" class="chip" data-k="growth" aria-pressed="false">Growing a tech business</button>
+        <button type="button" class="chip" data-k="ai" aria-pressed="false">Deciding where AI fits</button>
+      </div>
+      <div class="out" aria-live="polite">
+        <h3 id="out-title">In a first conversation we could cover:</h3>
+        <ul id="out-list">
+          <li>OSS and BSS transformation and 5G readiness</li>
+          <li>AIOps and closed-loop network automation</li>
+          <li>Redesigning processes with TM Forum frameworks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="services" class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How I can help</h2>
+        <p>Most work falls into six areas. If yours sits between two of them, that is usually where the interesting problem is.</p>
+      </div>
+      <ul class="services">
+        <li>
+          <h3>Go-to-market and strategy</h3>
+          <p>Business model and value chain analysis, positioning against competitors, partner ecosystem plans, carve-outs, global capability centre set-up, and how to work with industry analysts.</p>
+        </li>
+        <li>
+          <h3>Bid and proposal strategy</h3>
+          <p>Responses to RFPs, RFQs and RFIs, point-of-view papers and whitepapers, and demos or proofs of concept shaped for each person in the buying group.</p>
+        </li>
+        <li>
+          <h3>Telecom and media transformation</h3>
+          <p>OSS and BSS transformation, 5G readiness, network operations and service assurance, AIOps, and process redesign with TM Forum frameworks. Also streaming and OTT platforms.</p>
+        </li>
+        <li>
+          <h3>AI and agentic AI adoption</h3>
+          <p>Where retrieval-based assistants and multi-agent automation make sense, and how to build them with human review, guardrails, and clear targets for cost and reliability. Model evaluation and LLMOps standards.</p>
+        </li>
+        <li>
+          <h3>Industrial, energy and manufacturing</h3>
+          <p>IT and OT convergence, modernising SCADA and control systems, OT cybersecurity, industrial data platforms, and MES and ERP transformation.</p>
+        </li>
+        <li>
+          <h3>Application and data services</h3>
+          <p>Application development and support, observability, data engineering, and cloud transformation, including how to scope and buy them.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="process" class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How it works</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Intro call</h3>
+          <p>We talk through your situation, what you have already tried, and what a good result looks like.</p>
+        </li>
+        <li>
+          <h3>Diagnose</h3>
+          <p>I look at where you are today across market, process, technology and team, with research and discovery sessions where needed.</p>
+        </li>
+        <li>
+          <h3>Recommend</h3>
+          <p>You get a clear point of view: the options, the trade-offs, and the path I would take, written for the people who decide.</p>
+        </li>
+        <li>
+          <h3>Support the work</h3>
+          <p>If it helps, I stay on to carry it out with you: proposals, proofs of concept, and partner and analyst conversations.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about" class="block dark">
+    <div class="wrap about">
+      <div>
+        <div class="sec-head">
+          <h2>About Prateek</h2>
+        </div>
+        <p>I have spent over 15 years in presales, product management and consulting for telecom, media, energy, manufacturing and hi-tech clients. I started in network engineering and automation, moved into product and business development, and now spend most of my time helping technology companies shape their go-to-market and win complex deals.</p>
+        <p>I like the part of a project where nobody is sure what the problem is yet. I explain things plainly, and I will tell you when an idea, including a fashionable one, is not the right fit.</p>
+      </div>
+      <ul class="facts">
+        <li><strong>MBA, IIM Lucknow</strong><span>2022 to 2023</span></li>
+        <li><strong>B.Tech in Information Technology</strong><span>The LNM Institute of Information Technology, 2010</span></li>
+        <li><strong>Google Cloud Certified Generative AI Leader</strong><span>2026</span></li>
+        <li><strong>Industries</strong><span>Telecom, media, energy, manufacturing, hi-tech</span></li>
+        <li><strong>Also certified in</strong><span>Industrial cybersecurity, presales solution architecture, Scrum product ownership, Lean Six Sigma Yellow Belt</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Come talk it through.</h2>
+        <p>Tell me what you are working on and what is in the way. I will reply with how I think I can help, or who else might be a better fit.</p>
+      </div>
+      <div class="contact-row">
+        <a class="btn primary" href="mailto:epraagn@gmail.com?subject=Consulting%20enquiry">Email me</a>
+        <a class="btn ghost" href="https://wa.me/919582237599" rel="noopener">Message on WhatsApp</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/prateek-agnihotri-579b2016/" rel="noopener">View LinkedIn profile</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="row">
+    <span>&copy; 2026 Prateek Agnihotri. Views expressed here are my own.</span>
+    <a href="https://comegrab.in">comegrab.in</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var topics = {
+    telco: {
+      title: 'In a first conversation we could cover:',
+      items: ['OSS and BSS transformation and 5G readiness', 'AIOps and closed-loop network automation', 'Redesigning processes with TM Forum frameworks']
+    },
+    vendor: {
+      title: 'In a first conversation we could cover:',
+      items: ['Go-to-market and partner ecosystem plans', 'Positioning with industry analysts', 'Winning complex RFPs, with a proof of concept that fits the buyer']
+    },
+    industry: {
+      title: 'In a first conversation we could cover:',
+      items: ['IT and OT convergence and control-system modernisation', 'OT cybersecurity', 'Industrial data platforms and AI for operations']
+    },
+    consumer: {
+      title: 'In a first conversation we could cover:',
+      items: ['Business model and value chain analysis', 'Selling direct: your own store, marketplaces and partners', 'Using AI for customer support, sales and day-to-day operations']
+    },
+    growth: {
+      title: 'In a first conversation we could cover:',
+      items: ['Business model and value chain analysis', 'Setting up a global capability centre', 'A point of view or whitepaper that opens doors']
+    },
+    ai: {
+      title: 'In a first conversation we could cover:',
+      items: ['Where assistants and agents help, and where they do not', 'Guardrails, human review, and what it will cost to run', 'Choosing and testing models before you commit']
+    }
+  };
+  var chips = document.querySelectorAll('.chip');
+  var title = document.getElementById('out-title');
+  var list = document.getElementById('out-list');
+
+  function show(key) {
+    var t = topics[key];
+    if (!t) return;
+    title.textContent = t.title;
+    list.textContent = '';
+    t.items.forEach(function (text) {
+      var li = document.createElement('li');
+      li.textContent = text;
+      list.appendChild(li);
+    });
+    chips.forEach(function (c) {
+      c.setAttribute('aria-pressed', c.getAttribute('data-k') === key ? 'true' : 'false');
+    });
+  }
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () { show(c.getAttribute('data-k')); });
+  });
+})();
+</script>
+</body>
+</html>
